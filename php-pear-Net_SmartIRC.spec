@@ -14,7 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	b51a6edd91bcf66c5027939c1bee6325
 Patch0:		%{name}-fix_includes.patch
-URL:		http://sf.net/projects/phpsmartirc/
+URL:		http://pear.php.net/package/Net_SmartIRC/	
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 #Provides:	pear(SmartIRC/defines.php) pear(SmartIRC/messagehandler.php)
 Requires:	php-pear
