@@ -15,6 +15,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://sf.net/projects/phpsmartirc/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+Provides:	pear(SmartIRC/defines.php) pear(SmartIRC/messagehandler.php)
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
