@@ -11,6 +11,7 @@ Version:	0.5.0
 Release:	0.9
 License:	LGPL
 Group:		Development/Languages/PHP
+# Source0-md5:	fa2c284d72b4edf21dc3361fc3c4bf82
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://sf.net/projects/phpsmartirc/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
