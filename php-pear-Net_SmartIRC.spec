@@ -1,17 +1,17 @@
 %include	/usr/lib/rpm/macros.php
 %define         _class          Net
 %define         _subclass       SmartIRC
-%define		_status		beta
+%define		_status		stable
 
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - IRC Client Class
 Summary(pl):	%{_pearname} - Klasa klienta IRC
 Name:		php-pear-%{_pearname}
-Version:	0.5.0
-Release:	0.9
+Version:	0.5.1
+Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
-# Source0-md5:	fa2c284d72b4edf21dc3361fc3c4bf82
+# Source0-md5:	971f0345e49f1318d31854ea96be0a17
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://sf.net/projects/phpsmartirc/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
