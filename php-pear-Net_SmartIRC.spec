@@ -19,10 +19,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Net_SmartIRC is a PHP class for communication with IRC networks,
-which conforms to the RFC 2812 (IRC protocol).
-It's an API that handles all IRC protocol messages.
-This class is designed for creating IRC bots, chats and show irc related info on webpages.
+Net_SmartIRC is a PHP class for communication with IRC networks, which
+conforms to the RFC 2812 (IRC protocol). It's an API that handles all
+IRC protocol messages. This class is designed for creating IRC bots,
+chats and show irc related info on webpages.
 
 Featurelist:
 - actionhandler for the API
@@ -37,7 +37,8 @@ Featurelist:
 - supports PHP 4.1.x to 4.3.0
 - sendbuffer with priority levels
 - channel synching (tracking of users/modes/topic etc in variables)
-- IRC functions: op, deop, voice, devoice, ban, unban, join, part, action, message, query, ctcp, mode, topic, nick, invite 
+- IRC functions: op, deop, voice, devoice, ban, unban, join, part,
+  action, message, query, ctcp, mode, topic, nick, invite
 
 This class has in PEAR status: %{_status}.
 
