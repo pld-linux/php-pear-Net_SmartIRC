@@ -61,7 +61,7 @@ Lista mo¿liwo¶ci:
 - obs³uga rozszerzeñ PHP fsocks i socket
 - zgodno¶æ z PHP od 4.1.x do 4.3.0
 - sendbuffer z priorytetami
-- synchronizacja kana³ów (¶ledzienie u¿ytkowników/trybów/tematów w
+- synchronizacja kana³ów (¶ledzienie u¿ytkowników/trybów/motywów w
   zmiennych)
 - funkcje IRC: op, deop, voice, devoice, ban, unban, join, part,
   action, message, query, ctcp, mode, topic, nick, invite.
