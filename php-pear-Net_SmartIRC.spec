@@ -43,7 +43,7 @@ Featurelist:
 - IRC functions: op, deop, voice, devoice, ban, unban, join, part,
   action, message, query, ctcp, mode, topic, nick, invite
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Net_SmartIRC to klasa PHP do komunikacji z sieciami IRC zgodnymi z RFC
