@@ -1,11 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Net
-%define         _subclass       SmartIRC
+%define		_class		Net
+%define		_subclass	SmartIRC
 %define		_status		stable
-
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_pearname} - IRC Client Class
-Summary(pl):	%{_pearname} - Klasa klienta IRC
+
+Summary:	%{_pearname} - IRC client class
+Summary(pl):	%{_pearname} - klasa klienta IRC
 Name:		php-pear-%{_pearname}
 Version:	0.5.5p1
 Release:	1
