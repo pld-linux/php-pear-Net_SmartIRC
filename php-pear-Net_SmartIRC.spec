@@ -8,7 +8,7 @@ Summary:	%{_pearname} - IRC client class
 Summary(pl):	%{_pearname} - klasa klienta IRC
 Name:		php-pear-%{_pearname}
 Version:	0.5.5p1
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,7 +16,6 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 Patch0:		%{name}-fix_includes.patch
 URL:		http://pear.php.net/package/Net_SmartIRC/	
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
-#Provides:	pear(SmartIRC/defines.php) pear(SmartIRC/messagehandler.php)
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -80,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
 install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/SmartIRC/{defines,messagehandler}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install %{_pearname}-%{version}/SmartIRC/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
