@@ -43,6 +43,28 @@ Featurelist:
 This class has in PEAR status: %{_status}.
 
 %description -l pl
+Net_SmartIRC to klasa PHP do komunikacji z sieciami IRC zgodnymi z RFC
+2812 (protoko³em IRC). Jest to API obs³uguj±ce wszystkie komunikaty
+protoko³u IRC. Ta klasa zosta³a zaprojektowana do tworzenia botów
+ircowych, chatów i pokazywania informacji zwi±zanych z ircem na
+stronach WWW.
+
+Lista mo¿liwo¶ci:
+- obs³uga akcji dla API
+- obs³uga komunikatów dla API
+- zabezpieczenie przed zapchaniem przy wysy³aniu/odbieraniu
+- wykrywanie i zmiana pseudonimów w przypadku kolizji
+- zdarzenia czasowe
+- w pe³ni obiektowo zorientowane programowanie
+- automatyczne wznawianie po³±czeñ
+- system ¶ledzenia i logowania
+- obs³uga rozszerzeñ PHP fsocks i socket
+- zgodno¶æ z PHP od 4.1.x do 4.3.0
+- sendbuffer z priorytetami
+- synchronizacja kana³ów (¶ledzienie u¿ytkowników/trybów/tematów w
+  zmiennych)
+- funkcje IRC: op, deop, voice, devoice, ban, unban, join, part,
+  action, message, query, ctcp, mode, topic, nick, invite.
 
 Ta klasa ma w PEAR status: %{_status}.
 
