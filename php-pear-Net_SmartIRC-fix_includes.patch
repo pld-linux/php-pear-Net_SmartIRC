@@ -1,20 +1,16 @@
---- Net_SmartIRC-0.5.1/SmartIRC.php~	Mon Jun 23 08:05:53 2003
-+++ Net_SmartIRC-0.5.1/SmartIRC.php	Mon Jun 23 08:05:59 2003
-@@ -36,8 +36,8 @@
+diff -burN Net_SmartIRC-0.5.5p1.orig/SmartIRC.php Net_SmartIRC-0.5.5p1/SmartIRC.php
+--- Net_SmartIRC-0.5.5p1.orig/SmartIRC.php	Tue Jul 22 20:02:07 2003
++++ Net_SmartIRC-0.5.5p1/SmartIRC.php	Thu Jul 24 00:34:38 2003
+@@ -43,9 +43,9 @@
   *
   */
  // ------- PHP code ----------
 -include_once('SmartIRC/defines.php');
+-include_once('SmartIRC/irccommands.php');
 -include_once('SmartIRC/messagehandler.php');
 +include_once('Net/SmartIRC/defines.php');
++include_once('Net/SmartIRC/irccommands.php');
 +include_once('Net/SmartIRC/messagehandler.php');
- define('SMARTIRC_VERSION', '0.5.1');
+ define('SMARTIRC_VERSION', '0.5.5 ($Revision$)');
  define('SMARTIRC_VERSIONSTRING', 'Net_SmartIRC '.SMARTIRC_VERSION);
  
-@@ -2536,4 +2536,4 @@
-         unset($this);
-     }
- }
--?>
-\ No newline at end of file
-+?>
