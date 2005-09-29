@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - IRC client class
 Summary(pl):	%{_pearname} - klasa klienta IRC
 Name:		php-pear-%{_pearname}
-Version:	0.5.5p1
-Release:	3.1
+Version:	1.0.0
+Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	b51a6edd91bcf66c5027939c1bee6325
+# Source0-md5:	042935bf413e7021aeea2971dd4d3997
 Patch0:		%{name}-fix_includes.patch
 URL:		http://pear.php.net/package/Net_SmartIRC/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11

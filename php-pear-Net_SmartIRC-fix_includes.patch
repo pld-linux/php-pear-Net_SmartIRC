@@ -1,6 +1,5 @@
-diff -burN Net_SmartIRC-0.5.5p1.orig/SmartIRC.php Net_SmartIRC-0.5.5p1/SmartIRC.php
---- Net_SmartIRC-0.5.5p1.orig/SmartIRC.php	Tue Jul 22 20:02:07 2003
-+++ Net_SmartIRC-0.5.5p1/SmartIRC.php	Thu Jul 24 00:34:38 2003
+--- ./SmartIRC.php~	2005-09-29 03:21:19.000000000 +0300
++++ ./SmartIRC.php	2005-09-29 03:22:16.000000000 +0300
 @@ -43,9 +43,9 @@
   *
   */
@@ -11,6 +10,6 @@ diff -burN Net_SmartIRC-0.5.5p1.orig/SmartIRC.php Net_SmartIRC-0.5.5p1/SmartIRC.
 +include_once('Net/SmartIRC/defines.php');
 +include_once('Net/SmartIRC/irccommands.php');
 +include_once('Net/SmartIRC/messagehandler.php');
- define('SMARTIRC_VERSION', '0.5.5 ($Revision$)');
+ define('SMARTIRC_VERSION', '1.0.0 ($Revision$)');
  define('SMARTIRC_VERSIONSTRING', 'Net_SmartIRC '.SMARTIRC_VERSION);
  
