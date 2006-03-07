@@ -15,6 +15,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	042935bf413e7021aeea2971dd4d3997
 Patch0:		%{name}-fix_includes.patch
 URL:		http://pear.php.net/package/Net_SmartIRC/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
