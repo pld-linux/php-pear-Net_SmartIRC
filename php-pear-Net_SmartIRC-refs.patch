@@ -1,0 +1,12 @@
+--- Net/SmartIRC.php~	2005-09-29 11:07:57.000000000 +0300
++++ Net/SmartIRC.php	2007-01-16 20:41:01.415661572 +0200
+@@ -2198,7 +2198,8 @@
+     }
+     
+     function &throwError($message) {
+-        return new Net_SmartIRC_Error($message);
++		$ret = new Net_SmartIRC_Error($message);
++		return $ret;
+     }
+ }
+ 
