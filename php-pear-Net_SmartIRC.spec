@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - IRC client class
-Summary(pl):	%{_pearname} - klasa klienta IRC
+Summary(pl.UTF-8):   %{_pearname} - klasa klienta IRC
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	2
@@ -47,26 +47,26 @@ Featurelist:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Net_SmartIRC to klasa PHP do komunikacji z sieciami IRC zgodnymi z RFC
-2812 (protoko≥em IRC). Jest to API obs≥uguj±ce wszystkie komunikaty
-protoko≥u IRC. Ta klasa zosta≥a zaprojektowana do tworzenia botÛw
-ircowych, chatÛw i pokazywania informacji zwi±zanych z ircem na
+2812 (protoko≈Çem IRC). Jest to API obs≈ÇugujƒÖce wszystkie komunikaty
+protoko≈Çu IRC. Ta klasa zosta≈Ça zaprojektowana do tworzenia bot√≥w
+ircowych, chat√≥w i pokazywania informacji zwiƒÖzanych z ircem na
 stronach WWW.
 
-Lista moøliwo∂ci:
-- obs≥uga akcji dla API
-- obs≥uga komunikatÛw dla API
-- zabezpieczenie przed zapchaniem przy wysy≥aniu/odbieraniu
-- wykrywanie i zmiana pseudonimÛw w przypadku kolizji
+Lista mo≈ºliwo≈õci:
+- obs≈Çuga akcji dla API
+- obs≈Çuga komunikat√≥w dla API
+- zabezpieczenie przed zapchaniem przy wysy≈Çaniu/odbieraniu
+- wykrywanie i zmiana pseudonim√≥w w przypadku kolizji
 - zdarzenia czasowe
-- w pe≥ni obiektowo zorientowane programowanie
-- automatyczne wznawianie po≥±czeÒ
-- system ∂ledzenia i logowania
-- obs≥uga rozszerzeÒ PHP fsocks i socket
-- zgodno∂Ê z PHP od 4.1.x do 4.3.0
+- w pe≈Çni obiektowo zorientowane programowanie
+- automatyczne wznawianie po≈ÇƒÖcze≈Ñ
+- system ≈õledzenia i logowania
+- obs≈Çuga rozszerze≈Ñ PHP fsocks i socket
+- zgodno≈õƒá z PHP od 4.1.x do 4.3.0
 - sendbuffer z priorytetami
-- synchronizacja kana≥Ûw (∂ledzienie uøytkownikÛw/trybÛw/motywÛw w
+- synchronizacja kana≈Ç√≥w (≈õledzienie u≈ºytkownik√≥w/tryb√≥w/motyw√≥w w
   zmiennych)
 - funkcje IRC: op, deop, voice, devoice, ban, unban, join, part,
   action, message, query, ctcp, mode, topic, nick, invite.
