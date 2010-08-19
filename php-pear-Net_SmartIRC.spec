@@ -3,18 +3,16 @@
 %define		_subclass	SmartIRC
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - IRC client class
 Summary(pl.UTF-8):	%{_pearname} - klasa klienta IRC
 Name:		php-pear-%{_pearname}
-Version:	1.0.0
-Release:	3
+Version:	1.0.1
+Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	042935bf413e7021aeea2971dd4d3997
+# Source0-md5:	c8d5543a5c9565e5eed574135ff1a9b5
 Patch0:		%{name}-fix_includes.patch
-Patch1:		%{name}-refs.patch
 URL:		http://pear.php.net/package/Net_SmartIRC/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -22,6 +20,8 @@ BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_phpdocdir		%{_docdir}/phpdoc
 
 %description
 Net_SmartIRC is a PHP class for communication with IRC networks, which
@@ -73,16 +73,38 @@ Lista możliwości:
 
 Ta klasa ma w PEAR status: %{_status}.
 
+%package phpdoc
+Summary:	Online manual for %{name}
+Summary(pl.UTF-8):	Dokumentacja online do %{name}
+Group:		Documentation
+Requires:	php-dirs
+
+%description phpdoc
+Documentation for %{name}.
+
+%description phpdoc -l pl.UTF-8
+Dokumentacja do %{name}.
+
 %prep
 %pear_package_setup
-cd ./%{php_pear_dir}/%{_class}
 %patch0 -p1
-%patch1 -p1
+
+mv docs/%{_pearname}/examples .
+mv docs/%{_pearname}/docs/HTML apidoc
+mv docs/%{_pearname}/docs/* .
+rmdir docs/%{_pearname}/docs
+mv docs/%{_pearname}/* .
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
+
+install -d $RPM_BUILD_ROOT%{_phpdocdir}/%{_pearname}
+cp -a apidoc/* $RPM_BUILD_ROOT%{_phpdocdir}/%{_pearname}
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -90,9 +112,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log
-%doc docs/%{_pearname}/docs/*
-%doc docs/%{_pearname}/{CHANGELOG,CREDITS,FEATURES,README}
+%doc CHANGELOG CREDITS FEATURES README
+%doc DOCUMENTATION HOWTO
 %dir %{php_pear_dir}/%{_class}/%{_subclass}
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
+
+%{_examplesdir}/%{name}-%{version}
+
+%files phpdoc
+%defattr(644,root,root,755)
+%{_phpdocdir}/%{_pearname}
