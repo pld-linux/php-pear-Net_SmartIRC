@@ -1,5 +1,5 @@
---- Net_SmartIRC-1.0.1/usr/share/pear/Net/SmartIRC.php~	2010-08-19 16:07:02.000000000 +0300
-+++ Net_SmartIRC-1.0.1/usr/share/pear/Net/SmartIRC.php	2010-08-19 16:09:15.338384660 +0300
+--- Net_SmartIRC-1.0.1/usr/share/pear/Net/SmartIRC.php	2010-08-19 16:09:15.338384660 +0300
++++ Net_SmartIRC-1.0.1/usr/share/pear/Net/SmartIRC.php	2010-08-20 20:00:47.535022269 +0300
 @@ -43,7 +43,7 @@
   *
   */
@@ -9,3 +9,14 @@
  define('SMARTIRC_VERSION', '1.1.0-dev ($Revision$)');
  define('SMARTIRC_VERSIONSTRING', 'Net_SmartIRC '.SMARTIRC_VERSION);
  
+@@ -2587,8 +2587,8 @@
+ }
+ 
+ // includes must be after the base class definition, required for PHP5
+-require_once 'SmartIRC/irccommands.php';
+-require_once 'SmartIRC/messagehandler.php';
++require_once 'IRC/SmartIRC/irccommands.php';
++require_once 'IRC/SmartIRC/messagehandler.php';
+ 
+ class Net_SmartIRC extends Net_SmartIRC_messagehandler
+ {
