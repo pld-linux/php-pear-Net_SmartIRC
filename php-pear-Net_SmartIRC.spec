@@ -1,8 +1,6 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Net
-%define		_subclass	SmartIRC
 %define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	Net_SmartIRC
 Summary:	%{_pearname} - IRC client class
 Summary(pl.UTF-8):	%{_pearname} - klasa klienta IRC
 Name:		php-pear-%{_pearname}
@@ -114,10 +112,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %doc CHANGELOG CREDITS FEATURES README
 %doc DOCUMENTATION HOWTO
-%dir %{php_pear_dir}/%{_class}/%{_subclass}
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/*.php
+%{php_pear_dir}/Net/SmartIRC.php
+%{php_pear_dir}/Net/SmartIRC
 
 %{_examplesdir}/%{name}-%{version}
 
