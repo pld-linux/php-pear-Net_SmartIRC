@@ -1,7 +1,7 @@
 Upstream-Tracker: http://pear.php.net/bugs/bug.php?id=17769
 
---- Net_SmartIRC-1.0.1/usr/share/pear/Net/SmartIRC.php	2010-08-19 16:09:15.338384660 +0300
-+++ Net_SmartIRC-1.0.1/usr/share/pear/Net/SmartIRC.php	2010-08-20 20:00:47.535022269 +0300
+--- Net_SmartIRC-1.0.2/usr/share/pear/Net/SmartIRC.php~	2010-11-15 17:51:07.000000000 +0200
++++ Net_SmartIRC-1.0.2/usr/share/pear/Net/SmartIRC.php	2010-11-15 17:54:00.468941323 +0200
 @@ -43,7 +43,7 @@
   *
   */
