@@ -1,20 +1,21 @@
+%define		status		stable
+%define		pearname	Net_SmartIRC
 %include	/usr/lib/rpm/macros.php
-%define		_status		stable
-%define		_pearname	Net_SmartIRC
-Summary:	%{_pearname} - IRC client class
-Summary(pl.UTF-8):	%{_pearname} - klasa klienta IRC
-Name:		php-pear-%{_pearname}
+Summary:	%{pearname} - IRC client class
+Summary(pl.UTF-8):	%{pearname} - klasa klienta IRC
+Name:		php-pear-%{pearname}
 Version:	1.0.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
 # Source0-md5:	cbaec235fb1542161f47be490a1f0bf3
 Patch0:		%{name}-fix_includes.patch
+Patch1:		strict.patch
 URL:		http://pear.php.net/package/Net_SmartIRC/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -37,13 +38,12 @@ Featurelist:
 - autoreconnect
 - debugging/logging system
 - supports fsocks and PHP socket extension
-- supports PHP 4.1.x to 4.3.0
 - sendbuffer with priority levels
 - channel synching (tracking of users/modes/topic etc in variables)
 - IRC functions: op, deop, voice, devoice, ban, unban, join, part,
   action, message, query, ctcp, mode, topic, nick, invite
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Net_SmartIRC to klasa PHP do komunikacji z sieciami IRC zgodnymi z RFC
@@ -62,14 +62,13 @@ Lista możliwości:
 - automatyczne wznawianie połączeń
 - system śledzenia i logowania
 - obsługa rozszerzeń PHP fsocks i socket
-- zgodność z PHP od 4.1.x do 4.3.0
 - sendbuffer z priorytetami
 - synchronizacja kanałów (śledzienie użytkowników/trybów/motywów w
   zmiennych)
 - funkcje IRC: op, deop, voice, devoice, ban, unban, join, part,
   action, message, query, ctcp, mode, topic, nick, invite.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %package phpdoc
 Summary:	Online manual for %{name}
@@ -86,20 +85,21 @@ Dokumentacja do %{name}.
 %prep
 %pear_package_setup
 %patch0 -p1
+%patch1 -p1
 
-mv docs/%{_pearname}/examples .
-mv docs/%{_pearname}/docs/HTML apidoc
-mv docs/%{_pearname}/docs/* .
-rmdir docs/%{_pearname}/docs
-mv docs/%{_pearname}/* .
+mv docs/%{pearname}/examples .
+mv docs/%{pearname}/docs/HTML apidoc
+mv docs/%{pearname}/docs/* .
+rmdir docs/%{pearname}/docs
+mv docs/%{pearname}/* .
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
-install -d $RPM_BUILD_ROOT%{_phpdocdir}/%{_pearname}
-cp -a apidoc/* $RPM_BUILD_ROOT%{_phpdocdir}/%{_pearname}
+install -d $RPM_BUILD_ROOT%{_phpdocdir}/%{pearname}
+cp -a apidoc/* $RPM_BUILD_ROOT%{_phpdocdir}/%{pearname}
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
@@ -120,4 +120,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files phpdoc
 %defattr(644,root,root,755)
-%{_phpdocdir}/%{_pearname}
+%{_phpdocdir}/%{pearname}
