@@ -1,21 +1,21 @@
 %define		status		stable
 %define		pearname	Net_SmartIRC
+%define		php_min_version 5.3.0
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - IRC client class
 Summary(pl.UTF-8):	%{pearname} - klasa klienta IRC
 Name:		php-pear-%{pearname}
-Version:	1.0.2
-Release:	2
-License:	LGPL
+Version:	1.1.0
+Release:	1
+License:	LGPL v2.1
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	cbaec235fb1542161f47be490a1f0bf3
-Patch0:		%{name}-fix_includes.patch
-Patch1:		strict.patch
+# Source0-md5:	28fcb9d501af5e666130717576acff50
 URL:		http://pear.php.net/package/Net_SmartIRC/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
+Requires:	php(core) >= %{php_min_version}
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -84,10 +84,7 @@ Dokumentacja do %{name}.
 
 %prep
 %pear_package_setup
-%patch0 -p1
-%patch1 -p1
 
-mv docs/%{pearname}/examples .
 mv docs/%{pearname}/docs/HTML apidoc
 mv docs/%{pearname}/docs/* .
 rmdir docs/%{pearname}/docs
@@ -110,12 +107,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log
-%doc CHANGELOG CREDITS FEATURES README
+%doc CREDITS FEATURES README.md
 %doc DOCUMENTATION HOWTO
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Net/SmartIRC.php
 %{php_pear_dir}/Net/SmartIRC
-
 %{_examplesdir}/%{name}-%{version}
 
 %files phpdoc
