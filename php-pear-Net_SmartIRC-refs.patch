@@ -1,12 +1,12 @@
---- Net/SmartIRC.php~	2005-09-29 11:07:57.000000000 +0300
-+++ Net/SmartIRC.php	2007-01-16 20:41:01.415661572 +0200
-@@ -2198,7 +2198,8 @@
-     }
-     
-     function &throwError($message) {
+--- /usr/share/pear/Net/SmartIRC.php~	2015-10-26 23:30:15.000000000 +0200
++++ /usr/share/pear/Net/SmartIRC.php	2015-10-27 00:26:50.745902056 +0200
+@@ -2646,7 +2646,8 @@
+ 
+     protected function &throwError($message)
+     {
 -        return new Net_SmartIRC_Error($message);
-+		$ret = new Net_SmartIRC_Error($message);
-+		return $ret;
++        $var = new Net_SmartIRC_Error($message);
++        return $var;
      }
  }
  
