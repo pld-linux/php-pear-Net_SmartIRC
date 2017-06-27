@@ -1,18 +1,16 @@
-%define		status		stable
 %define		pearname	Net_SmartIRC
 %define		php_min_version 5.3.0
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - IRC client class
 Summary(pl.UTF-8):	%{pearname} - klasa klienta IRC
 Name:		php-pear-%{pearname}
-Version:	1.1.10
+Version:	1.1.11
 Release:	1
 License:	LGPL v2.1
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	869ce82deac177fc13b6cf16ab6af9d4
-Patch0:		%{name}-refs.patch
-URL:		http://pear.php.net/package/Net_SmartIRC/
+Source0:	https://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	bbeead7ebae129591a5e9d0a7fdf2364
+URL:		https://pear.php.net/package/Net_SmartIRC
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
@@ -44,8 +42,6 @@ Featurelist:
 - IRC functions: op, deop, voice, devoice, ban, unban, join, part,
   action, message, query, ctcp, mode, topic, nick, invite
 
-In PEAR status of this package is: %{status}.
-
 %description -l pl.UTF-8
 Net_SmartIRC to klasa PHP do komunikacji z sieciami IRC zgodnymi z RFC
 2812 (protokołem IRC). Jest to API obsługujące wszystkie komunikaty
@@ -69,8 +65,6 @@ Lista możliwości:
 - funkcje IRC: op, deop, voice, devoice, ban, unban, join, part,
   action, message, query, ctcp, mode, topic, nick, invite.
 
-Ta klasa ma w PEAR status: %{status}.
-
 %package phpdoc
 Summary:	Online manual for %{name}
 Summary(pl.UTF-8):	Dokumentacja online do %{name}
@@ -85,7 +79,6 @@ Dokumentacja do %{name}.
 
 %prep
 %pear_package_setup
-%patch0 -p1
 
 mv docs/%{pearname}/docs/HTML apidoc
 mv docs/%{pearname}/docs/* .
