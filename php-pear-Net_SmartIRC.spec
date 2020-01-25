@@ -1,6 +1,5 @@
 %define		pearname	Net_SmartIRC
 %define		php_min_version 5.3.0
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - IRC client class
 Summary(pl.UTF-8):	%{pearname} - klasa klienta IRC
 Name:		php-pear-%{pearname}
