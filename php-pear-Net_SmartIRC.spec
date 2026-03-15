@@ -4,7 +4,7 @@ Summary:	%{pearname} - IRC client class
 Summary(pl.UTF-8):	%{pearname} - klasa klienta IRC
 Name:		php-pear-%{pearname}
 Version:	1.1.13
-Release:	1
+Release:	2
 License:	LGPL v2.1
 Group:		Development/Languages/PHP
 Source0:	https://pear.php.net/get/%{pearname}-%{version}.tgz
